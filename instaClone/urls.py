@@ -16,6 +16,17 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+
+#from myapp.views import signup_
+
+
+from django.conf.urls import url
+
+from myapp.views import signup_view,login_view,feed_view
+
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+url('feed.html',feed_view),
+  url('login.html', login_view),
+  url('', signup_view)
+
 ]
